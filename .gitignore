@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.pid
+*.bak
+*.csv
+*.jsonl
+*.txt
+!requirements.txt
+scan_reload.json
+scan_status.json
+auto_cycle_state.json
+proxy_stats.json
+upload_channel.jsonl

@@ -1,0 +1,127 @@
+{
+  "url": "https://pentest_site-ref.user2.workers.dev",
+  "secret": "YOUR_XKEY_SECRET",
+  "account_id": "YOUR_CF_ACCOUNT_ID",
+  "workers": [
+    {
+      "url": "https://pentest_site-ref.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref2.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref3.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref4.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref5.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref6.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref7.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref8.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref9.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref10.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref11.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref12.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref13.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref14.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref15.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref16.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref17.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref18.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref19.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref20.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref21.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref22.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref23.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref24.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref25.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref26.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref27.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref28.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref29.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    },
+    {
+      "url": "https://pentest_site-ref30.user2.workers.dev",
+      "secret": "YOUR_XKEY_SECRET"
+    }
+  ]
+}
