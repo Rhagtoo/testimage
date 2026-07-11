@@ -68,9 +68,12 @@ def parse_cookies(raw: str) -> dict[str, str]:
 
 async def extract_chrome_cookies(port: int = 9222) -> dict[str, str]:
     """Извлекает cookies из Chrome через CDP."""
-    import websockets  # optional dependency
+    try:
+        import websockets  # noqa: F811
+    except ImportError:
+        raise RuntimeError("Нужен модуль websockets: pip install websockets")
 
-    cl = httpx.AsyncClient(timeout=httpx.Timeout(5.0))
+    cl = httpx.AsyncClient(timeout=httpx.Timeout(5.0), http2=False)
     try:
         r = await cl.get(f"http://127.0.0.1:{port}/json")
         tabs = r.json()
