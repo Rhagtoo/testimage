@@ -22,6 +22,61 @@ LOG_FILE = Path("id_calibration.jsonl")
 
 
 # ── CDP helpers ─────────────────────────────────────────────────
+CHROME_PATHS = [
+    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    r"C:\Users\Rhagtoo\AppData\Local\Google\Chrome\Application\chrome.exe",
+]
+
+
+def launch_chrome(port: int = 9222):
+    """Запускает Chrome с CDP (отдельный профиль)."""
+    import subprocess, socket
+
+    # Найти chrome.exe
+    exe = None
+    for p in CHROME_PATHS:
+        if Path(p).exists():
+            exe = p
+            break
+    if not exe:
+        print("\u274c Chrome не найден. Проверь CHROME_PATHS в скрипте.")
+        return False
+
+    # Проверить, не запущен ли уже
+    try:
+        s = socket.create_connection(("127.0.0.1", port), timeout=1)
+        s.close()
+        print(f"Chrome уже слушает порт {port}")
+        return True
+    except OSError:
+        pass
+
+    print(f"Запускаю Chrome ({exe}) на порту {port}...")
+    profile = Path("chrome_cdp_profile")
+    profile.mkdir(exist_ok=True)
+    subprocess.Popen(
+        [exe, f"--remote-debugging-port={port}", f"--user-data-dir={profile.resolve()}",
+         "--no-first-run", "--no-default-browser-check", "https://postimg.cc/files"],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+    )
+
+    # Ждём готовности порта
+    deadline = time.time() + 15
+    while time.time() < deadline:
+        try:
+            s = socket.create_connection(("127.0.0.1", port), timeout=1)
+            s.close()
+            print(f"Chrome готов (порт {port})")
+            print("   Залогинься в аккаунт в открывшемся окне, затем нажми Enter...")
+            input()
+            return True
+        except OSError:
+            time.sleep(0.5)
+    print("Chrome не запустился")
+    return False
+
+
 def discover_tab(port: int = 9222):
     """Находит WebSocket URL вкладки postimg.cc через Chrome CDP."""
     import urllib.request
@@ -181,10 +236,15 @@ def analyze_results(results: list[dict]):
 def main():
     parser = argparse.ArgumentParser(description="Калибровка ID-генератора через Chrome CDP")
     parser.add_argument("--port", type=int, default=9222, help="Chrome CDP порт (default: 9222)")
+    parser.add_argument("--launch", action="store_true", help="Авто-запуск Chrome с CDP")
     parser.add_argument("--count", "-n", type=int, default=20, help="Количество галерей")
     parser.add_argument("--pause", "-p", type=float, default=3.0, help="Пауза между созданиями, сек")
     parser.add_argument("--analyze", action="store_true", help="Только анализ существующего лога")
     args = parser.parse_args()
+
+    if args.launch:
+        if not launch_chrome(args.port):
+            sys.exit(1)
 
     if args.analyze:
         if not LOG_FILE.exists():
