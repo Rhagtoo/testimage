@@ -1,0 +1,135 @@
+{
+  "transport": {
+    "blind": false,
+    "budget": 5,
+    "consecutive_miss": 0,
+    "rotations": 0,
+    "transport": "unknown"
+  },
+  "scheduler": {
+    "total_sources": 618,
+    "clusters": 618,
+    "active": 0,
+    "singletons": 0,
+    "heap_size": 1236
+  },
+  "total_clusters": 618,
+  "top_clusters": [
+    {
+      "prefix": "ptzMK",
+      "discovered": 3,
+      "tight": false,
+      "tested": 64,
+      "remaining": 0,
+      "p_hit": 0.0152,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "Mc10C",
+      "discovered": 3,
+      "tight": false,
+      "tested": 64,
+      "remaining": 0,
+      "p_hit": 0.0147,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "YF2Vp",
+      "discovered": 3,
+      "tight": false,
+      "tested": 64,
+      "remaining": 0,
+      "p_hit": 0.0152,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "JZ8fz",
+      "discovered": 3,
+      "tight": false,
+      "tested": 64,
+      "remaining": 0,
+      "p_hit": 0.0147,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "MvKY6",
+      "discovered": 3,
+      "tight": false,
+      "tested": 64,
+      "remaining": 0,
+      "p_hit": 0.0149,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "D48MK",
+      "discovered": 3,
+      "tight": false,
+      "tested": 64,
+      "remaining": 0,
+      "p_hit": 0.0147,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "JrFJn",
+      "discovered": 3,
+      "tight": false,
+      "tested": 63,
+      "remaining": 0,
+      "p_hit": 0.0149,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "TdDZ5",
+      "discovered": 3,
+      "tight": false,
+      "tested": 63,
+      "remaining": 0,
+      "p_hit": 0.0152,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "nHFgQ",
+      "discovered": 3,
+      "tight": false,
+      "tested": 63,
+      "remaining": 0,
+      "p_hit": 0.0154,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    },
+    {
+      "prefix": "C5Rdj",
+      "discovered": 3,
+      "tight": false,
+      "tested": 63,
+      "remaining": 0,
+      "p_hit": 0.0152,
+      "expected_new": 0.0,
+      "ev": 0.0,
+      "state": "ACTIVE"
+    }
+  ],
+  "total_top_ev": 0.0,
+  "db_stats": {
+    "total": 618,
+    "active": 618,
+    "singletons": 0
+  }
+}

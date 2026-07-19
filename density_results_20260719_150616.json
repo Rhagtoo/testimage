@@ -1,0 +1,642 @@
+[
+  {
+    "pair": 0,
+    "type": "anchor_a",
+    "gid": "94Sqgmm",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmn",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmo",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmp",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmq",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmr",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgms",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmt",
+    "http": "404",
+    "size": "28080",
+    "oracle": "?"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmu",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmv",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmw",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmx",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmy",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94Sqgmz",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94SqgmA",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94SqgmB",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "middle",
+    "gid": "94SqgmC",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 0,
+    "type": "anchor_b",
+    "gid": "94SqgmD",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "anchor_a",
+    "gid": "ts6Qwyp",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyq",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyr",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwys",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyt",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyu",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyv",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyw",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyx",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyy",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6Qwyz",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyA",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyB",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyC",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyD",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyE",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyF",
+    "http": "404",
+    "size": "28145",
+    "oracle": "?"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyG",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyH",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "middle",
+    "gid": "ts6QwyI",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 1,
+    "type": "anchor_b",
+    "gid": "ts6QwyJ",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "anchor_a",
+    "gid": "Y4vyPBF",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBG",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBH",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBI",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBJ",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBK",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBL",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBM",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBN",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBO",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBP",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "middle",
+    "gid": "Y4vyPBQ",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 2,
+    "type": "anchor_b",
+    "gid": "Y4vyPBR",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 3,
+    "type": "anchor_a",
+    "gid": "SnQVzb9",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 3,
+    "type": "middle",
+    "gid": "SnQVzba",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 3,
+    "type": "middle",
+    "gid": "SnQVzbb",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 3,
+    "type": "middle",
+    "gid": "SnQVzbc",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 3,
+    "type": "middle",
+    "gid": "SnQVzbd",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 3,
+    "type": "middle",
+    "gid": "SnQVzbe",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 3,
+    "type": "anchor_b",
+    "gid": "SnQVzbf",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "anchor_a",
+    "gid": "33j9Jz9",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jza",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzb",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzc",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzd",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jze",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzf",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzg",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzh",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzi",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzj",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzk",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzl",
+    "http": "000",
+    "size": "0",
+    "oracle": "?"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzm",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzn",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzo",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzp",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzq",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzr",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "middle",
+    "gid": "33j9Jzs",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  },
+  {
+    "pair": 4,
+    "type": "anchor_b",
+    "gid": "33j9Jzt",
+    "http": "404",
+    "size": "28073",
+    "oracle": "NEVER"
+  }
+]
