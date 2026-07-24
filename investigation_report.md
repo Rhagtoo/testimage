@@ -24,15 +24,15 @@
 
 ## 1. Контекст
 
-**Цель:** исследование пространства gallery ID на testimage.com / testimage.com. Разработка методов обнаружения чужих галерей через IDOR-уязвимость (прямой доступ по ID без авторизации).
+**Цель:** исследование пространства gallery ID на testimage.cc / testimage.cc. Разработка методов обнаружения чужих галерей через IDOR-уязвимость (прямой доступ по ID без авторизации).
 
 **Известно до сессии:**
 - ID галерей: 7 символов, алфавит `[a-zA-Z0-9]` (base62), пространство 62^7 ≈ 3.52×10^12
 - При одновременной загрузке нескольких фото ID оказываются близко (дельта = 1)
 - WAF банит IP на 2+ минуты после 3–10 невалидных запросов
-- CF Workers (104 шт, 3 аккаунта) используются как прокси; testimage.com банит CF-диапазоны волнами
+- CF Workers (104 шт, 3 аккаунта) используются как прокси; testimage.cc банит CF-диапазоны волнами
 - В датасете: `upload_dataset.csv` (826 ID), `upload_intel.jsonl` (963 ID), `enriched_counter.csv` (89K ID)
-- GUESTKEY: `efdba20b206cb93d0ee8157d375063ea` (кука для testimage.com)
+- GUESTKEY: `efdba20b206cb93d0ee8157d375063ea` (кука для testimage.cc)
 - AdGuard VPN (CLI и Windows-клиент), SOCKS5 на 127.0.0.1:1080
 
 **Задача от пользователя:** собрать ВСЕ логи, скрипты и результаты за сессию для передачи третьему лицу на ревью. Только факты, без выводов.
@@ -118,9 +118,9 @@
 
 **Результат:** бан **перекрёстный**. После бана на `/json`, запросы к `/gallery/{ref}` также возвращают 404 (28099B).
 
-### 4.3. CDN (i.testimage.com)
+### 4.3. CDN (i.testimage.cc)
 
-Запросы к CDN (`i.testimage.com/{id}.jpg`) возвращают 404 с 524B — это другое тело, не совпадающее ни с одним из вариантов `/gallery/`. Оракул на CDN не работает.
+Запросы к CDN (`i.testimage.cc/{id}.jpg`) возвращают 404 с 524B — это другое тело, не совпадающее ни с одним из вариантов `/gallery/`. Оракул на CDN не работает.
 
 ### 4.4. Порог бана (сводка)
 
@@ -183,12 +183,12 @@
 
 WSL AdGuard CLI (`adguardvpn-cli`) и Windows AdGuard (десктопное приложение) подключаются к **разным exit-нодам** даже для одной и той же локации:
 
-| Клиент | Локация | IP | Статус testimage.com |
+| Клиент | Локация | IP | Статус testimage.cc |
 |--------|---------|-----|-------------------|
 | Windows AdGuard | Брюссель | 45.43.142.100 | Свежий (200) |
 | WSL CLI | Брюссель | 149.22.91.193 | Забанен (404) |
 
-WSL-ноды часто пред-забанены на testimage.com из-за предыдущих экспериментов.
+WSL-ноды часто пред-забанены на testimage.cc из-за предыдущих экспериментов.
 
 ### 6.2. AdGuard CLI — список локаций
 
@@ -229,12 +229,12 @@ bangkok, manila, shanghai, hongkong, astana, tokyo, seoul, sydney, auckland
 Все попытки загрузки через curl завершились ошибкой:
 ```
 {"error":{"message":"Automated uploads are not allowed via the website. 
-Please use the official API: https://api.testimage.com/","code":403}}
+Please use the official API: https://api.testimage.cc/","code":403}}
 ```
 
 Попытки включали:
-- POST на `testimage.com/json` (неправильный эндпоинт)
-- POST на `testimage.com/json` (правильный эндпоинт)
+- POST на `testimage.cc/json` (неправильный эндпоинт)
+- POST на `testimage.cc/json` (правильный эндпоинт)
 - С GUESTKEY и без
 - С различными User-Agent (curl, Chrome)
 - С заголовками `sec-ch-ua`, `sec-fetch-*`, `X-Requested-With`
@@ -247,14 +247,14 @@ Please use the official API: https://api.testimage.com/","code":403}}
 ### 7.2. Попытки через браузер
 
 - Playwright: не запустился — не хватает `libnspr4.so` в WSL, нет sudo для установки
-- Snap Chromium + CDP: запустился, подключился к testimage.com, но GUESTKEY не установился (пустая страница без JS-инициализации)
+- Snap Chromium + CDP: запустился, подключился к testimage.cc, но GUESTKEY не установился (пустая страница без JS-инициализации)
 - Chrome на Windows: CDP порт не открыт из WSL
 
 ### 7.3. Успешные загрузки (пользователь)
 
 Пользователь загружал галереи через Windows Chrome. HAR-файлы показывают:
-- Эндпоинт: `POST https://testimage.com/json`
-- Страница: `https://testimage.com/web` (специальная страница для загрузки)
+- Эндпоинт: `POST https://testimage.cc/json`
+- Страница: `https://testimage.cc/web` (специальная страница для загрузки)
 - Загрузка через URL (поле `url`), не файл
 - Поля: `gallery`, `optsize=0`, `expire=0`, `url=<image_cdn_url>`, `numfiles`, `upload_session`
 - Cookie: `GUESTKEY=efdba20b206cb93d0ee8157d375063ea`
@@ -264,7 +264,7 @@ Please use the official API: https://api.testimage.com/","code":403}}
 
 ## 8. Ручные тесты (curl)
 
-### 8.1. Прямые запросы к testimage.com
+### 8.1. Прямые запросы к testimage.cc
 
 | Дата/время | AdGuard | Запрос | Результат |
 |-----------|---------|--------|-----------|
@@ -286,7 +286,7 @@ Please use the official API: https://api.testimage.com/","code":403}}
 
 ### 8.2. Запросы к CDN
 
-`/i.testimage.com/{hash}/image.jpg` — всегда 404 (524B) или 200 (если ID валиден). Непригоден для оракула.
+`/i.testimage.cc/{hash}/image.jpg` — всегда 404 (524B) или 200 (если ID валиден). Непригоден для оракула.
 
 ### 8.3. JSON API
 
@@ -310,7 +310,7 @@ Please use the official API: https://api.testimage.com/","code":403}}
 | `/home/rhagtoo/fast_oracle_scanner.py` | 5.8 KB | Быстрый случайный перебор (40 потоков), реф-проверка каждые 50 |
 | `/home/rhagtoo/smart_oracle_scanner.py` | 6.3 KB | Сканер вокруг 2207 якорей из датасета (±5) |
 | `/home/rhagtoo/suffix_scanner.py` | 5.8 KB | Брутфорс последних 2 символов галереи (3844 комбинации) |
-| `/home/rhagtoo/postimg_density_check.py` | 6.0 KB | Проверка плотности между якорными парами из CSV |
+| `/home/rhagtoo/testimage_density_check.py` | 6.0 KB | Проверка плотности между якорными парами из CSV |
 
 ### 9.2. Данные
 
@@ -325,7 +325,7 @@ Please use the official API: https://api.testimage.com/","code":403}}
 
 | Файл | Записи | Даты |
 |------|--------|------|
-| `\\wsl.localhost\Ubuntu\home\rhagtoo\testimage\testimage.com.20har.har` | 15,835 | 19.07.2026 11:59–12:13 UTC |
+| `\\wsl.localhost\Ubuntu\home\rhagtoo\testimage\testimage.cc.20har.har` | 15,835 | 19.07.2026 11:59–12:13 UTC |
 
 Содержит: просмотры галерей `XFkkFgw`, `XFkkFga`, `y3tXqH0`, `m46dMKg`; загрузки через `/web`; 301-редиректы (нормализация слеша).
 
@@ -333,21 +333,21 @@ Please use the official API: https://api.testimage.com/","code":403}}
 
 | Файл | Записей | Описание |
 |------|---------|----------|
-| `/mnt/c/Users/Rhagtoo/POSTIMG/upload_dataset.csv` | 826 | Галереи из аккаунта |
-| `/mnt/c/Users/Rhagtoo/POSTIMG/upload_intel.jsonl` | 963 | Галереи с серверным временем |
-| `/mnt/c/Users/Rhagtoo/POSTIMG/enriched_counter.csv` | 89,025 | Полный датасет (counter-attack) |
-| `/mnt/c/Users/Rhagtoo/POSTIMG/enriched_burst.csv` | 1,246 | Обогащённые burst-данные |
-| `/mnt/c/Users/Rhagtoo/POSTIMG/worker_ref.json` | — | 104 CF Worker (3 аккаунта) |
-| `/mnt/c/Users/Rhagtoo/POSTIMG/cf_worker/src/worker.js` | — | Код CF Worker |
+| `/mnt/c/Users/Rhagtoo/TESTIMAGE/upload_dataset.csv` | 826 | Галереи из аккаунта |
+| `/mnt/c/Users/Rhagtoo/TESTIMAGE/upload_intel.jsonl` | 963 | Галереи с серверным временем |
+| `/mnt/c/Users/Rhagtoo/TESTIMAGE/enriched_counter.csv` | 89,025 | Полный датасет (counter-attack) |
+| `/mnt/c/Users/Rhagtoo/TESTIMAGE/enriched_burst.csv` | 1,246 | Обогащённые burst-данные |
+| `/mnt/c/Users/Rhagtoo/TESTIMAGE/worker_ref.json` | — | 104 CF Worker (3 аккаунта) |
+| `/mnt/c/Users/Rhagtoo/TESTIMAGE/cf_worker/src/worker.js` | — | Код CF Worker |
 
 ---
 
 ## 10. Анализ HAR: загрузка через `/web`
 
-Страница `https://testimage.com/web` и JavaScript `web.js` реализуют механизм загрузки:
+Страница `https://testimage.cc/web` и JavaScript `web.js` реализуют механизм загрузки:
 
 1. `submitRequest()` → формирует FormData с полями: `gallery`, `optsize`, `expire`, `url`/`file`, `numfiles`, `upload_session`
-2. `XMLHttpRequest` → `POST https://testimage.com/json`
+2. `XMLHttpRequest` → `POST https://testimage.cc/json`
 3. Сервер возвращает JSON: `{"url":"...","image":"...","gallery":"ID"}`
 4. При повторной загрузке в существующую галерею: `gallery=CF08KT5` (не пусто)
 5. При первой загрузке: `gallery=` (пусто, сервер создаёт новую)
@@ -408,7 +408,7 @@ Please use the official API: https://api.testimage.com/","code":403}}
 
 ## 12. CF Workers
 
-На момент сессии все 104 CF Worker'а возвращали 403 при обращении к testimage.com (волна бана CF-диапазона). Не использовались в экспериментах.
+На момент сессии все 104 CF Worker'а возвращали 403 при обращении к testimage.cc (волна бана CF-диапазона). Не использовались в экспериментах.
 
 ---
 
@@ -601,7 +601,7 @@ Please use the official API: https://api.testimage.com/","code":403}}
 
 Прямой доступ с кукой SESSIONKEY:
 ```
-GET postimg.cc/json?action=list&album={ID}
+GET testimage.cc/json?action=list&album={ID}
 Cookie: SESSIONKEY=4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36df46
 ```
 - Валидный ID → 500, 132B (ошибка сервера, но галерея существует)
@@ -610,10 +610,10 @@ Cookie: SESSIONKEY=4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36d
 
 ### 20.2. Запись (upload) — только из браузера
 
-1. `POST postimg.cc/json` — `action=add` → создаёт пустую галерею (через JS в консоли браузера)
+1. `POST testimage.cc/json` — `action=add` → создаёт пустую галерею (через JS в консоли браузера)
 2. Публикация через curl из WSL с SESSIONKEY `1488e8...` + **sec-* заголовками**:
    ```
-   POST postimages.org/json
+   POST testimages.org/json
    Headers: sec-ch-ua, sec-ch-ua-mobile, sec-ch-ua-platform,
             sec-fetch-dest, sec-fetch-mode, sec-fetch-site,
             priority, cache-control, accept-language
@@ -625,9 +625,9 @@ Cookie: SESSIONKEY=4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36d
 
 | Ключ | Домен | Назначение |
 |------|-------|-----------|
-| `4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36df46` | postimg.cc | READ (проверка галерей) |
-| `1488e84963dfa1a66d5d5c1788e0a8e9e15c2f6977279e56ee90bce9f4f304b5` | postimages.org | WRITE (публикация) |
-| `efdba20b206cb93d0ee8157d375063ea` | postimg.cc | GUESTKEY (браузер) |
+| `4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36df46` | testimage.cc | READ (проверка галерей) |
+| `1488e84963dfa1a66d5d5c1788e0a8e9e15c2f6977279e56ee90bce9f4f304b5` | testimages.org | WRITE (публикация) |
+| `efdba20b206cb93d0ee8157d375063ea` | testimage.cc | GUESTKEY (браузер) |
 
 ---
 
@@ -665,7 +665,7 @@ Cookie: SESSIONKEY=4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36d
 | Файл | Назначение |
 |------|-----------|
 | `analyze_id_stats.py` | Статистический анализ структуры ID |
-| `postimg_density_check.py` | Проверка плотности между якорными парами |
+| `testimage_density_check.py` | Проверка плотности между якорными парами |
 | `pentest_site_gallery_scanner.py` | Оригинальный production-сканер (330 KB) |
 | `anchor_ids.txt` | 2207 уникальных ID из аккаунта |
 
@@ -688,7 +688,7 @@ Cookie: SESSIONKEY=4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36d
 3. **JSON API защищён** от ботов — использовать HTML /gallery/{id}
 4. **Ротация AdGuard, не отказ от Workers** — Workers слепнут не сами, а из-за CF edge IP
 5. **Сначала сиды, потом брут** — не тыкать в случайные ID
-6. **Postimg.cc НЕ видит AdGuard** — видит только IP Cloudflare. AdGuard = транспорт до CF.
+6. **Testimage.cc НЕ видит AdGuard** — видит только IP Cloudflare. AdGuard = транспорт до CF.
 7. **Порты деградируют** — AdGuard-инстансы отваливаются при длительной работе
 8. **WSL AdGuard ≠ Windows AdGuard** — разные exit-ноды даже для одной локации
 
@@ -709,4 +709,4 @@ Cookie: SESSIONKEY=4f1115042cbfbd75b81e2ced3d6df18e7b26dd84dd3d37fd21e759373f36d
 
 ---
 
-*Отчёт обновлён 2026-07-25. Охватывает сессии 13.07–23.07. Все скрипты: `/home/rhagtoo/testimage/`. Исходные данные: `/mnt/c/Users/Rhagtoo/POSTIMG/`. Git: `github.com/Rhagtoo/testimage`.*
+*Отчёт обновлён 2026-07-25. Охватывает сессии 13.07–23.07. Все скрипты: `/home/rhagtoo/testimage/`. Исходные данные: `/mnt/c/Users/Rhagtoo/TESTIMAGE/`. Git: `github.com/Rhagtoo/testimage`.*

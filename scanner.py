@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ── CONFIG ──────────────────────────────────────────────
-TARGET_HOST = "postimg.cc"          # Target host to scan
+TARGET_HOST = "testimage.cc"          # Target host to scan
 REF_GALLERY = "y3tXqH0"            # Known existing gallery for ref checks
 ANCHORS_FILE = "anchor_ids.txt"     # File with known gallery IDs (one per line)
 BASE_PORT = 1080                    # First SOCKS5 port

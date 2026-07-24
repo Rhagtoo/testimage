@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 SOCKS = "127.0.0.1:1080"
-HOST = "testimage.com"
+HOST = "testimage.cc"
 CONCURRENCY = 30
 REF = "XFkkFgw"
 REF_CHECK_EVERY = 100

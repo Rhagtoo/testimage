@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ── CONFIG ──────────────────────────────────────────────
-TARGET_HOST = "postimg.cc"
+TARGET_HOST = "testimage.cc"
 REF_GALLERY = "y3tXqH0"
 ANCHORS_FILE = "anchor_ids.txt"
 SOCKS_PORT = 1080

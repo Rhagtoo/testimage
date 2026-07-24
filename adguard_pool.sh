@@ -88,7 +88,7 @@ case "$cmd" in
         for port in $(seq 1081 1088); do
             result=$(curl -x socks5h://127.0.0.1:$port -s -o /dev/null \
                 -w "HTTP %{http_code} size %{size_download}" \
-                --max-time 8 "https://postimg.cc/gallery/$REF" 2>/dev/null)
+                --max-time 8 "https://testimage.cc/gallery/$REF" 2>/dev/null)
             echo "  :$port → $result"
         done
         ;;

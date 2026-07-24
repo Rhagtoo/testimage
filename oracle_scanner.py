@@ -9,7 +9,7 @@ from datetime import datetime
 
 # ── Config ──────────────────────────────────────────────
 SOCKS = "127.0.0.1:1080"
-HOST = "testimage.com"
+HOST = "testimage.cc"
 REQUESTS_PER_IP = 15  # rotate before ban (~20 threshold)
 REQUEST_DELAY = 1.8    # seconds between requests
 

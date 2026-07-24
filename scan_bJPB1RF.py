@@ -19,7 +19,7 @@ PORTS = [
     1124, 1125, 1126, 1127, 1128, 1129, 1130,  # Atlanta-Miami-Dallas-Chicago-Boston-Denver-Seattle
     1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139,  # Lagos-Phoenix-Dubai-SiliconValley-LasVegas-MexicoCity-Hanoi-Taipei-Johannesburg
 ]
-HOST = "postimg.cc"
+HOST = "testimage.cc"
 REF = "y3tXqH0"
 SEED = "bJPB1RF"
 NUM_TARGETS = 1000

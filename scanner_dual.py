@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ── Config ──────────────────────────────────────────────
-TARGET_HOST = "postimg.cc"
+TARGET_HOST = "testimage.cc"
 REF = "y3tXqH0"
 SEED = "MWjqnfs"
 NUM_TARGETS = 10000

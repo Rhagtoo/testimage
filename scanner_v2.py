@@ -15,7 +15,7 @@ from collections import defaultdict
 
 # ── Config ──────────────────────────────────────────────
 PORTS = [1081,1082,1083,1084,1085,1087,1088,1089,1090,1091,1094,1096,1097,1098,1099,1100,1101,1102,1103,1104,1105,1106,1107,1111,1113,1114,1115,1116,1117,1118,1119,1120]  # 32 fresh
-HOST = "postimg.cc"
+HOST = "testimage.cc"
 REF = "y3tXqH0"
 ANCHORS_FILE = "/home/rhagtoo/testimage/anchor_ids.txt"
 BATCH = 5           # probes per port before ref check
@@ -200,7 +200,7 @@ class PortPool:
         try:
             result = subprocess.run(
                 f'curl -x socks5h://127.0.0.1:{port} -s --max-time 8 '
-                f'https://postimg-diag.rhagtoo.workers.dev/ip',
+                f'https://testimage-diag.rhagtoo.workers.dev/ip',
                 shell=True, capture_output=True, text=True, timeout=10
             )
             data = json.loads(result.stdout)

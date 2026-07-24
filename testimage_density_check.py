@@ -8,7 +8,7 @@ import subprocess, time, sys, json, csv
 from datetime import datetime
 
 SOCKS = "127.0.0.1:1080"
-HOST = "testimage.com"
+HOST = "testimage.cc"
 REQUESTS_PER_IP = 18  # rotate before ban (~20 threshold)
 DELAY = 2.5  # seconds between requests
 
@@ -85,7 +85,7 @@ def find_anchor_pairs(csv_path, min_delta=5, max_delta=30):
 
 
 def main():
-    csv_path = "/mnt/c/Users/Rhagtoo/POSTIMG/enriched_counter.csv"
+    csv_path = "/mnt/c/Users/Rhagtoo/TESTIMAGE/enriched_counter.csv"
     pairs = find_anchor_pairs(csv_path)
     print(f"Found {len(pairs)} anchor pairs (delta 5-30)")
     

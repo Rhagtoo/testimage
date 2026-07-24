@@ -10,7 +10,7 @@ from pathlib import Path
 
 # ── Config ──────────────────────────────────────────────
 PORT = 1080            # AdGuard SOCKS port
-HOST = "postimg.cc"
+HOST = "testimage.cc"
 REF = "y3tXqH0"
 ANCHORS_FILE = "/home/rhagtoo/testimage/anchor_ids.txt"
 BATCH = 1
